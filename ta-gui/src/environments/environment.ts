@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    // Initialize Firebase
+      apiKey: "AIzaSyB4M2C-ZXkz4hYVty1LSNwJR2Y_e2ONr-4",
+      authDomain: "siga-ess-auth.firebaseapp.com",
+      projectId: "siga-ess-auth",
+      storageBucket: "siga-ess-auth.appspot.com",
+      appId: "1:297284155798:web:ae9588b9cee548708e45b7"
+  }
 };
 
 /*

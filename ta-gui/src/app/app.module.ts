@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Auth } from "@angular/fire/auth";
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app'
+import { getFirestore, provideFirestore } from '@angular/fire/firestore'
+import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MetasComponent } from './metas/metas.component';
@@ -16,6 +19,7 @@ import { ProfComponent } from './prof/prof.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginService } from './login.service';
 import { PerfilComponent } from './perfil/perfil.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { PerfilComponent } from './perfil/perfil.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    Auth,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
     RouterModule.forRoot([
       {
         path: 'professores',
@@ -61,6 +68,10 @@ import { PerfilComponent } from './perfil/perfil.component';
       { 
         path: "perfil",
         component: PerfilComponent
+      },
+      { 
+        path: "login",
+        component: AppComponent
       }
     ])
   ],

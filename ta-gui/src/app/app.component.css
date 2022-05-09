@@ -1,17 +1,44 @@
-
-.siga{
+.texto{
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.header_link{
-  font-family: 'Courier New', Courier, monospace;
-  padding: 1%;
+.login{
+  margin-left: 20%; 
+  width: 60%;
+  margin-top: 8%;
 }
 
-.pag-profs{
-  font-family: 'Courier New', Courier, monospace;
+.msg{
+  text-align: center;
+  margin-top: 5%;
 }
+
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+
+.btcad{
+  margin-left: 46%;
+  font-family: Arial;
+  background-color: rgb(44, 108, 247);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+
+.btlogin{
+  font-family: Arial;
+  background-color: rgb(241, 129, 38);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
 
 .texto{
   text-align: center;

@@ -65,7 +65,7 @@ export class Pessoa {
   } 
 }
 
-export class personConverter {
+export class PersonConverter {
   toFirestore(person: Pessoa): object {
     return {
       uid: person.uid,

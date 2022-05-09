@@ -1,16 +1,38 @@
-<html>
-
-
-<nav align="center" class="top-header">
-  <p>
-    Teaching Assistant
-  </p>
-  
-  <a class="header_link" routerLink="/alunos">Alunos</a>
-  <a class="header_link" routerLink="/professores">Professor</a>
-  <!-- <a class="header_link" routerLink="/metas">Metas</a> -->
-  <!-- <a class="header_link" routerLink="/cadeiras">Cadeiras</a> -->
-</nav>
+<html lang="en">
+  <h1 class="msg">
+    Siga
+  </h1>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+      <title>Integrated System</title>
+  </head>
+<body>
+   <h3 class="msg" align="center">Bem vindo!</h3>
+   
+   <form id="cadastro-form" class="my_form">
+      <div class="input-field">
+        <input type="text" id="person-name"
+          [(ngModel)]="pessoa.email"
+          [ngModelOptions]="{standalone: true}" required />
+        <label for="person-name">Email </label>
+      </div>
+      <div class="row">
+         <input type="password" id="person-name"
+          [(ngModel)]="pessoa.senha"
+          [ngModelOptions]="{standalone: true}" required />
+         <label>Senha </label>
+      </div>
+      <button class="btn waves-effect waves-light" (click)="logar=(pessoa)" type="submit">Fazer Login </button>
+      <a routerLink="/cadastro">
+         <button class="btn waves-effect waves-light">Cadastrar</button>
+      </a>      
+   </form>
+      
+</body>
 
 <router-outlet></router-outlet>
 
